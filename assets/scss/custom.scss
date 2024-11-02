@@ -1,3 +1,32 @@
 /*
     You can add your own custom styles here.
 */
+
+:root[data-scheme=dark] {
+    --body-background: hsl(0, 0%, 7%);
+    --card-background: hsl(240, 2%, 12%);
+}
+
+.container {
+
+    &.extended {
+        @include respond(md) {
+            max-width: 1024px;
+            --left-sidebar-max-width: 25%;
+            --right-sidebar-max-width: 25%;
+        }
+
+        @include respond(lg) {
+            max-width: 1280px;
+            --left-sidebar-max-width: 20%;
+            --right-sidebar-max-width: 25%;
+        }
+
+        @include respond(xl) {
+            max-width: 1536px;
+            --left-sidebar-max-width: 15%;
+            --right-sidebar-max-width: 20%;
+        }
+    }
+}
+
