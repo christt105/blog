@@ -11,6 +11,7 @@
 identifier = "github"
 name = "GitHub"
 url = "https://github.com/christt105"
+weight = 1
 
 [social.params]
 icon = "brand-github"
@@ -19,6 +20,7 @@ icon = "brand-github"
 identifier = "linkedin"
 name = "LinkedIn"
 url = "https://www.linkedin.com/in/christianmartinezdelarosa/"
+weight = 2
 
 [social.params]
 icon = "brand-linkedin"
@@ -27,6 +29,7 @@ icon = "brand-linkedin"
 identifier = "itch.io"
 name = "Itch.io"
 url = "https://christt105.itch.io/"
+weight = 3
 
 [social.params]
 icon = "brand-itch"
@@ -35,6 +38,7 @@ icon = "brand-itch"
 identifier = "discord"
 name = "Discord"
 url = "https://discordapp.com/users/360439358395908099"
+weight = 4
 
 [social.params]
 icon = "brand-discord"
@@ -43,6 +47,7 @@ icon = "brand-discord"
 identifier = "telegram"
 name = "Telegram"
 url = "https://t.me/christt105"
+weight = 5
 
 [social.params]
 icon = "brand-telegram"

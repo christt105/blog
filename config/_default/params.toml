@@ -5,12 +5,12 @@ rssFullContent = true
 favicon = "/blog/favicon.jpg"
 
 [footer]
-since = 2020
+since = 2024
 customText = ""
 
 [dateFormat]
 published = ":date_long"
-lastUpdated = ":date_long :time_long"
+lastUpdated = ":date_long"
 
 [sidebar]
 emoji = ""
