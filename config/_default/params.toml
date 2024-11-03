@@ -2,7 +2,7 @@
 mainSections = ["post"]
 # Output page's full content in RSS.
 rssFullContent = true
-favicon = "/favicon.png"
+favicon = "/blog/favicon.jpg"
 
 [footer]
 since = 2020
@@ -25,10 +25,10 @@ src = "img/avatar.png"
 [article]
 headingAnchor = false
 math = false
-readingTime = true
+readingTime = false
 
 [article.license]
-enabled = true
+enabled = false
 default = "Licensed under CC BY-NC-SA 4.0"
 
 ## Widgets
