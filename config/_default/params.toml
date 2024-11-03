@@ -14,7 +14,7 @@ lastUpdated = ":date_long"
 
 [sidebar]
 emoji = ""
-# subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+subtitle = "My personal blog where I will post things related to my projects."
 compact = false
 
 [sidebar.avatar]
