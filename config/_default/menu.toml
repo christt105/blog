@@ -51,3 +51,12 @@ weight = 5
 
 [social.params]
 icon = "brand-telegram"
+
+[[social]]
+identifier = "personal-web"
+name = "Personal Web"
+url = "https://christt105.github.io/"
+weight = 5
+
+[social.params]
+icon = "world"
