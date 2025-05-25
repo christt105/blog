@@ -5,7 +5,7 @@ date: 2024-12-15T20:54:12+01:00
 image: cover.png
 math: 
 license: 
-hidden: true
+draft: true
 comments: true
 ---
 
