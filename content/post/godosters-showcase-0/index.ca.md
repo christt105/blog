@@ -1,22 +1,18 @@
 ---  
 title: "Presentant Godosters – Devlog #0"  
 description: "Primera entrada del diari de desenvolupament de Godosters, un motor per crear jocs tipus Pokémon amb Godot. En aquesta publicació, faig un repàs de l’estat actual del projecte, les seves funcionalitats i cap a on vull portar-lo."  
-date: 2024-12-15T20:54:12+01:00  
-slug: "presentant-godosters-devlog-0"  
+date: 2025-05-26T00:00:00
+slug: "godosters-devlog-0"  
 image: cover.png  
 keywords: ["godot", "godosters", "devlog", "motor pokémon", "indie dev"]  
 readingTime: true  
-license:   
-draft: true  
+license:
 comments: true  
 categories:  
   - Godosters  
 tags:  
-  - godot  
+  - godot
   - devlog  
-  - desenvolupament de jocs  
-  - pokémon  
-  - indie dev  
 ---
 
 Hola! En aquesta entrada vull explicar breument l’estat actual del projecte en què he estat treballant: **Godosters**.
@@ -39,7 +35,7 @@ Una petita demostració en vídeo de l’estat actual del projecte:
 
 ### Shader de reflex a l’aigua
 
-Encara recordo la primera vegada que vaig arribar a Petalburg City i vaig veure el meu reflex al llac, al costat d’aquell nen. Era un efecte que pensava que seria fàcil de fer i per això el vaig triar com a primer. Em cridava l’atenció el món dels shaders, i he de dir que la simplicitat de Godot per escriure’ls em va sorprendre molt. És força semblant a GLSL. Vaig fer aquest [shader d’aigua](https://godotshaders.com/shader/sprite-water-reflection-pixel-art/), i al link teniu tots els detalls. Es pot activar per entitat, canviar-ne el color i ajustar-ne la posició. Per exemple, al vídeo es veu com el reflex del jugador i del Kecleon sota el pont està uns quants tiles més avall i amb un tint fosc.
+Encara recordo la primera vegada que vaig arribar a `Ciudad Petália` i vaig veure el meu reflex al llac, al costat d’aquell nen. Era un efecte que pensava que seria fàcil de fer i per això el vaig triar com a primer. Em cridava l’atenció el món dels shaders, i he de dir que la simplicitat de Godot per escriure’ls em va sorprendre molt. És força semblant a GLSL. Vaig fer aquest [shader d’aigua](https://godotshaders.com/shader/sprite-water-reflection-pixel-art/), al link teniu tots els detalls. Es pot activar per entitat, canviar-ne el color i ajustar-ne la posició. Per exemple, al vídeo es veu com el reflex del jugador i del Kecleon sota el pont està uns quants tiles més avall i amb un tint fosc.
 
 ![Shader d’Aigua](water-shader.gif)
 
@@ -87,7 +83,8 @@ M’agrada molt la gestió de dades, però també ha estat un dels motius pels q
 
 Tot i que està trencat per molts llocs, intentaré treure una versió amb cada devlog per mostrar com avança el projecte. Tingues en compte que és una versió molt inicial, i que moltes funcionalitats no funcionen o només funcionen des de l’editor.
 
-[Godosters v0.1.0](https://github.com/christt105/blog/releases/tag/Godosters_v0.1.0)
+- 🐧 [Descarrega Godosters v0.1.0 per a Linux](https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-linux.zip)
+- 🪟 [Descarrega Godosters v0.1.0 per a Windows](https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-windows.zip)
 
 ## Futur
 
@@ -96,8 +93,6 @@ La veritat és que no sé fins on arribarà aquest projecte. És un projecte per
 Encara he d’aprendre molt de Godot, però m’ho estic passant bé. Vull fer-ho tot sense llibreries externes i només amb GDScript. El projecte encara no és públic, així que el mantindré privat una mica més. Però si algun dia tinc alguna cosa estable i de la qual em senti orgullós, el publicaré.
 
 Aquest últim any ha estat molt intens i no he pogut dedicar-li temps. Espero poder fer-ho ara, i que aquest blog em serveixi de motivació per seguir.
-
-![Freqüència de Codi](CodeFrequency.png)
 
 Fins aquí la primera entrada amb contingut. Tinc moltes coses a explicar i més projectes per compartir, així que intentaré ser més actiu.
 

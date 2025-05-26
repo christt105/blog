@@ -1,25 +1,21 @@
 ---
 title: "Presentando Godosters – Devlog #0"
 description: "Primera entrada del diario de desarrollo de Godosters, un motor para crear juegos al estilo Pokémon en Godot. En este post repaso el estado actual del proyecto, sus funcionalidades y hacia dónde quiero llevarlo."
-date: 2024-12-15T20:54:12+01:00
-slug: "presentando-godosters-devlog-0"
+date: 2025-05-26T00:00:00
+slug: "godosters-devlog-0"
 image: cover.png
 keywords: ["godot", "godosters", "devlog", "pokemon engine", "indie dev"]
 readingTime: true
-license: 
-draft: true
+license:
 comments: true
 categories:
-  - Godosters
+  - godosters
 tags:
   - godot
   - devlog
-  - game development
-  - pokemon
-  - indie dev
 ---
 
-Hola, en este post voy a intentar explicar brevemente el estado actual del proyecto que he estado desarrollando, Godosters.
+Hola, en este post voy a intentar explicar brevemente el estado actual del proyecto que he estado desarrollando, **Godosters**.
 
 ## Descripción
 
@@ -27,7 +23,7 @@ Godosters es un motor para crear juegos al estilo de Pokémon. Es un proyecto qu
 
 Ahora mismo es un proyecto base de Godot con algunas funcionalidades, pero el objetivo es acabar haciendo todas las herramientas para que no se necesiten conocimientos técnicos de Godot para crear los juegos.
 
-Ahora es un proyecto privado, pero en cuanto tenga algo estable lo haré público. El objetivo es que no tenga muchas dependencias y esté todo hecho en GDScript o GDExtensions cuando sea realmente necesario.
+Ahora es un proyecto privado, pero en cuanto tenga algo estable lo haré público. El objetivo es que no tenga muchas dependencias y esté todo hecho en GDScript, o GDExtensions cuando sea realmente necesario.
 
 ## Funcionalidades actuales
 
@@ -87,7 +83,8 @@ Todo lo del manejo de datos es algo que me gusta y, a su vez, es lo que creo que
 
 Aunque esté roto por todos los sitios, voy a intentar publicar una build en cada devlog para ir viendo el avance del proyecto. Tened en cuenta que es una versión muy temprana del proyecto y que muchos sistemas no funcionan o necesitan tener el editor abierto para funcionar.
 
-[Godosters v0.1.0](https://github.com/christt105/blog/releases/tag/Godosters_v0.1.0)
+- 🐧 [Descargar Godosters v0.1.0 para Linux](https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-linux.zip)
+- 🪟 [Descargar Godosters v0.1.0 para Windows](https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-windows.zip)
 
 ## Futuro
 
@@ -96,8 +93,6 @@ La verdad es que no tengo muy claro hasta dónde voy a llegar con este proyecto.
 Aún me queda mucho por aprender de Godot, pero me está gustando. Mi intención con este proyecto es poder hacer todo lo posible sin librerías externas y todo en GDScript. El proyecto no está para ver, por lo que lo mantendré en privado una temporada más, pero si en algún momento empiezo a tener algo suficientemente estable y estoy orgulloso de lo que he hecho, lo haré público.
 
 Este último año he estado bastante ocupado y no le he dedicado nada de tiempo. A ver si ahora empiezo a tener algo más de tiempo libre y me motivo con el blog para continuar con el desarrollo.
-
-![Code Frequency](CodeFrequency.png)
 
 Y hasta aquí el primer post con contenido. Hay muchas cosas de las que quiero hablar y proyectos que comentar, por lo que intentaré estar más activo.
 

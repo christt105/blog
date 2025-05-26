@@ -1,22 +1,18 @@
 ---
 title: "Introducing Godosters – Devlog #0"
 description: "First entry of the Godosters development diary, an engine for creating Pokémon-style games in Godot. In this post, I review the current state of the project, its features, and where I want to take it."
-date: 2024-12-15T20:54:12+01:00
-slug: "introducing-godosters-devlog-0"
+date: 2025-05-26T00:00:00
+slug: "godosters-devlog-0"
 image: cover.png
 keywords: ["godot", "godosters", "devlog", "pokemon engine", "indie dev"]
 readingTime: true
-license: 
-draft: true
+license:
 comments: true
 categories:
   - Godosters
 tags:
   - godot
   - devlog
-  - game development
-  - pokemon
-  - indie dev
 ---
 
 Hi! In this post, I’m going to briefly explain the current state of the project I’ve been working on: **Godosters**.
@@ -87,7 +83,8 @@ I really like data management, but it’s also what made me take a long break fr
 
 Even though it’s broken in many ways, I’ll try to release a build with each devlog to show the project’s progress. Keep in mind this is a very early version, and many systems don’t work or require the editor to run.
 
-[Godosters v0.1.0](https://github.com/christt105/blog/releases/tag/Godosters_v0.1.0)
+- 🐧 [Download Godosters v0.1.0 for Linux](https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-linux.zip)
+- 🪟 [Download Godosters v0.1.0 for Windows](https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-windows.zip)
 
 ## Future
 
@@ -96,8 +93,6 @@ Honestly, I don’t know how far I’ll go with this project. It’s a personal 
 I still have a lot to learn about Godot, but I’m enjoying it. My goal is to build everything without external libraries and using only GDScript. The project isn’t public yet, so I’ll keep it private for a bit longer, but if I eventually have something stable and I’m proud of it, I’ll release it.
 
 This past year has been really busy and I haven’t had time to work on it. Hopefully, I’ll have more free time now, and this blog will motivate me to keep going.
-
-![Code Frequency](CodeFrequency.png)
 
 That’s it for this first content post. I’ve got lots to talk about and more projects to share, so I’ll try to stay more active.
 
