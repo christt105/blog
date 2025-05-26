@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog de christt105</title><link>https://christt105.github.io/blog/es/</link><description>Recent content on Blog de christt105</description><generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Mon, 26 May 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://christt105.github.io/blog/es/index.xml" rel="self" type="application/rss+xml"/><item><title>Presentando Godosters – Devlog #0</title><link>https://christt105.github.io/blog/es/p/godosters-devlog-0/</link><pubDate>Mon, 26 May 2025 00:00:00 +0200</pubDate><guid>https://christt105.github.io/blog/es/p/godosters-devlog-0/</guid><description>&lt;img src="https://christt105.github.io/blog/p/godosters-devlog-0/cover.png" alt="Featured image of post Presentando Godosters – Devlog #0" />&lt;p>Hola, en este post voy a intentar explicar brevemente el estado actual del proyecto que he estado desarrollando, &lt;strong>Godosters&lt;/strong>.&lt;/p>
+&lt;h2 id="descripción">Descripción
+&lt;/h2>&lt;p>Godosters es un motor para crear juegos al estilo de Pokémon. Es un proyecto que nació hace varios años y ha estado cambiando de tecnología hasta quedarse en Godot 4. En un futuro haré un post sobre la evolución y las decisiones que me llevaron a acabar usando Godot.&lt;/p>
+&lt;p>Ahora mismo es un proyecto base de Godot con algunas funcionalidades, pero el objetivo es acabar haciendo todas las herramientas para que no se necesiten conocimientos técnicos de Godot para crear los juegos.&lt;/p>
+&lt;p>Ahora es un proyecto privado, pero en cuanto tenga algo estable lo haré público. El objetivo es que no tenga muchas dependencias y esté todo hecho en GDScript, o GDExtensions cuando sea realmente necesario.&lt;/p>
+&lt;h2 id="funcionalidades-actuales">Funcionalidades actuales
+&lt;/h2>&lt;p>En este blog voy a ir haciendo un diario de las funcionalidades y cambios del proyecto. Vamos a hacer un repaso de las funcionalidades actuales. Si hay alguna que te guste y te gustaría saber cómo la he hecho, házmelo saber en los comentarios.&lt;/p>
+&lt;p>Una pequeña demostración del estado actual del proyecto en un vídeo:&lt;/p>
+&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/3pehEhqk4rA"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="shader-reflejo-del-agua">Shader reflejo del agua
+&lt;/h3>&lt;p>Aún recuerdo la primera vez que llegué a Ciudad Petalia y me vi reflejado en ese lago al lado de ese niño. Era un efecto que pensé que sería fácil de implementar, como primer efecto para hacer. Estaba interesado en los shaders y la verdad que la simpleza para hacer los shaders en Godot me encantó. Se asemeja bastante a GLSL. Hice el &lt;a class="link" href="https://godotshaders.com/shader/sprite-water-reflection-pixel-art/" target="_blank" rel="noopener"
+>shader del agua&lt;/a>, tenéis toda la información en el enlace. Puedes activarlo en cada entidad, cambiarle el color y su posición. Por ejemplo, en el vídeo se ve cómo, en el puente, el reflejo del jugador y del Kecleon está unos tiles por debajo y con un color oscuro.&lt;/p>
+&lt;p>&lt;img src="https://christt105.github.io/blog/p/godosters-devlog-0/water-shader.gif"
+width="469"
+height="322"
+srcset="https://christt105.github.io/blog/p/godosters-devlog-0/water-shader_hu_625cbd93c75748f5.gif 480w, https://christt105.github.io/blog/p/godosters-devlog-0/water-shader_hu_5a857f274281ddea.gif 1024w"
+loading="lazy"
+alt="Shader agua"
+class="gallery-image"
+data-flex-grow="145"
+data-flex-basis="349px"
+>&lt;/p>
+&lt;h3 id="shader-de-fondo-infinito-unmoving-plaid">Shader de fondo infinito (Unmoving Plaid)
+&lt;/h3>&lt;p>Continuando con los shaders, hice el del &lt;a class="link" href="https://godotshaders.com/shader/infinite-sprite/" target="_blank" rel="noopener"
+>fondo infinito (o unmoving plaid effect)&lt;/a>. La idea del proyecto es que cada mapa tenga un tamaño fijo, para calcular bien los límites de cada mapa y juntarlos. El problema con esto es que, si el personaje va al borde del mapa, se verá el fondo (a no ser que se rellene todo). Para evitar carga de trabajo adicional, he creado un shader que dibuja una imagen continua donde esté el fondo. Cada mapa contará con la posibilidad de añadir una imagen de fondo para no tener que preocuparte por pintar más allá de los límites del mapa.&lt;/p>
+&lt;p>&lt;img src="https://christt105.github.io/blog/p/godosters-devlog-0/infinite-map.gif"
+width="1284"
+height="754"
+srcset="https://christt105.github.io/blog/p/godosters-devlog-0/infinite-map_hu_13269702ec6bf0a5.gif 480w, https://christt105.github.io/blog/p/godosters-devlog-0/infinite-map_hu_afb0e7984e49beeb.gif 1024w"
+loading="lazy"
+alt="Shader mapa infinito"
+class="gallery-image"
+data-flex-grow="170"
+data-flex-basis="408px"
+>&lt;/p>
+&lt;h3 id="sistema-de-mapas">Sistema de Mapas
+&lt;/h3>&lt;p>Para el sistema de mapas pensé en hacer que cada escenario fuera una escena heredada de un mapa plantilla. He leído que la herencia de escenas no es la mejor solución, pero de momento lo tengo así. Cada mapa contiene unos atributos, que de momento solo es el tamaño en tiles del escenario y las conexiones con otros escenarios.&lt;/p>
+&lt;p>&lt;img src="https://christt105.github.io/blog/p/godosters-devlog-0/MapTemplate.png"
+width="1917"
+height="1034"
+srcset="https://christt105.github.io/blog/p/godosters-devlog-0/MapTemplate_hu_8541cbe954f7074.png 480w, https://christt105.github.io/blog/p/godosters-devlog-0/MapTemplate_hu_8f10f9085ea545df.png 1024w"
+loading="lazy"
+alt="Plantilla Map"
+class="gallery-image"
+data-flex-grow="185"
+data-flex-basis="444px"
+> &lt;img src="https://christt105.github.io/blog/p/godosters-devlog-0/Route120Editor.png"
+width="1919"
+height="1029"
+srcset="https://christt105.github.io/blog/p/godosters-devlog-0/Route120Editor_hu_6ca633814e9f7cc3.png 480w, https://christt105.github.io/blog/p/godosters-devlog-0/Route120Editor_hu_922ace8f9ae58deb.png 1024w"
+loading="lazy"
+alt="Ruta 120 en Editor"
+class="gallery-image"
+data-flex-grow="186"
+data-flex-basis="447px"
+>&lt;/p>
+&lt;p>Dentro de cada escena de mapa está el nodo TileMap donde se pinta todo, aunque no está actualizado con el nuevo sistema de tilemaps de Godot. He declarado algunos valores Z para definir qué se va a pintar antes o después; por ejemplo, los reflejos tienen un valor de -15.&lt;/p>
+&lt;p>Seguidamente, tenemos una colección de TileMaps de comportamiento. En estos TileMaps se asignan las propiedades de cada tile pintando con diferentes sprites: puedes bloquear completamente el paso o por dirección. También puedes pintar el ID del tile; por ejemplo, si es agua, deja huellas, etc. Una vez pintado, hay que hacer clic en un botón para que se aplique sobre la capa. Al haber varios TileMaps de comportamiento, se pueden activar y desactivar durante la partida. Por ejemplo, en el vídeo se ve un puente, el de la ruta 120, con dos TileMaps de comportamiento: uno que bloquea el paso al agua cuando estás por encima del puente, y otro por debajo. Cuando pasas por el puente se cambia el TileMap usado. Es un sistema aún en pañales y que necesita muchos cambios. La idea es que modifiques todo esto sin realmente ver qué está pasando por debajo, con una herramienta dedicada a eso.&lt;/p>
+&lt;p>Finalmente, tenemos una lista de &amp;ldquo;Actores&amp;rdquo; o eventos. Son los NPC o los objetos físicos que tienen un comportamiento.&lt;/p>
+&lt;h3 id="actores">Actores
+&lt;/h3>&lt;p>Un actor es una entidad con comportamiento. A las entidades puedes aplicarles ajustes como ponerles una textura, decidir si tienen reflejos, la capa donde se aplican o si son sólidos.&lt;/p>
+&lt;p>Los actores tienen un campo donde puedes añadirles un comportamiento. Cada objeto de comportamiento tiene unas funciones que se disparan dependiendo de cómo interactúes con ellos; por ejemplo, al pulsar el botón de acción delante de ellos, al entrar en el tile donde esté la entidad o constantemente en un bucle. Le puedes añadir una lista de acciones y las hará en orden. Tienes diferentes acciones y la idea es que cada usuario pueda crear acciones que use recurrentemente. Ahora está todo en el inspector de una forma muy arcaica. La idea en un futuro es crear una especie de lenguaje para tenerlo todo en un archivo. También está la idea de poder hacerlo con nodos, como hice en &lt;a class="link" href="https://youtu.be/_zOz2Mj4AMI?si=Zeix66XkwtTjLc9d" target="_blank" rel="noopener"
+>Kip Unity Framework&lt;/a>. Creo que puede estar muy bien para quienes no les gusta mucho programar.&lt;/p>
+&lt;p>&lt;img src="https://christt105.github.io/blog/p/godosters-devlog-0/ActorKecleon.png"
+width="495"
+height="745"
+srcset="https://christt105.github.io/blog/p/godosters-devlog-0/ActorKecleon_hu_377de4c563565376.png 480w, https://christt105.github.io/blog/p/godosters-devlog-0/ActorKecleon_hu_d2d0da77dae6f2e6.png 1024w"
+loading="lazy"
+alt="Actor Kecleon"
+class="gallery-image"
+data-flex-grow="66"
+data-flex-basis="159px"
+> &lt;img src="https://christt105.github.io/blog/p/godosters-devlog-0/ActorRunner.png"
+width="507"
+height="723"
+srcset="https://christt105.github.io/blog/p/godosters-devlog-0/ActorRunner_hu_9ccd3194a1bdd862.png 480w, https://christt105.github.io/blog/p/godosters-devlog-0/ActorRunner_hu_71df2d7325c2e2c6.png 1024w"
+loading="lazy"
+alt="Actor Runner"
+class="gallery-image"
+data-flex-grow="70"
+data-flex-basis="168px"
+>&lt;/p>
+&lt;h3 id="sistema-de-batalla">Sistema de Batalla
+&lt;/h3>&lt;p>No voy a negar que el sistema de batalla es lo que menos me apetece hacer. Tiene tantas variables y es todo tan complejo que es mucho trabajo para que quede algo decente. He hecho un sistema muy básico, que iré ampliando cuando lo necesite.&lt;/p>
+&lt;p>He pensado en usar el motor de batallas de Showdown para no tener que aplicar toda la lógica y que todo funcione perfecto, pero realmente no estoy seguro si se puede hacer. He de investigar.&lt;/p>
+&lt;p>&lt;img src="https://christt105.github.io/blog/p/godosters-devlog-0/BattleSystem.png"
+width="1918"
+height="1022"
+srcset="https://christt105.github.io/blog/p/godosters-devlog-0/BattleSystem_hu_dd18a46e83d3dc2c.png 480w, https://christt105.github.io/blog/p/godosters-devlog-0/BattleSystem_hu_a852f7d8f687b03d.png 1024w"
+loading="lazy"
+alt="Batallas"
+class="gallery-image"
+data-flex-grow="187"
+data-flex-basis="450px"
+>&lt;/p>
+&lt;h3 id="base-de-datos">Base de Datos
+&lt;/h3>&lt;p>Todo lo del manejo de datos es algo que me gusta y, a su vez, es lo que creo que hizo que me tomara un descanso bastante largo con este proyecto. En Kip Unity Framework tenía cada Pokémon y cada característica de cada especie en ScriptableObjects. La idea de tenerlo todo por assets y que pudieras tenerlo todo separado es algo que me gustaba mucho. El problema es que intenté replicar lo mismo en Godot con los Resources y no es igual. Son una herramienta muy buena, pero no están pensados para eso. El principal problema es tener referencias cíclicas. Es un &lt;a class="link" href="https://github.com/godotengine/godot-proposals/issues/7363" target="_blank" rel="noopener"
+>tema bastante debatido en la comunidad&lt;/a> y hay opiniones muy diversas. Cuando estaba desarrollando el proyecto, vi que en futuras versiones iban a implementar los .uid para cada archivo y pensé que lo mismo era una solución. He estado mirando de vez en cuando y realmente no sé si seguir con esta implementación o buscar algo diferente para la base de datos.&lt;/p>
+&lt;p>&lt;img src="https://christt105.github.io/blog/p/godosters-devlog-0/MudkipProperties.png"
+width="655"
+height="942"
+srcset="https://christt105.github.io/blog/p/godosters-devlog-0/MudkipProperties_hu_a06cc148e04f262d.png 480w, https://christt105.github.io/blog/p/godosters-devlog-0/MudkipProperties_hu_4efbebad52f7ecb3.png 1024w"
+loading="lazy"
+alt="Datos de Mudkip"
+class="gallery-image"
+data-flex-grow="69"
+data-flex-basis="166px"
+> &lt;img src="https://christt105.github.io/blog/p/godosters-devlog-0/MonsterDatabase.png"
+width="342"
+height="855"
+srcset="https://christt105.github.io/blog/p/godosters-devlog-0/MonsterDatabase_hu_acbdaaf28a1753b8.png 480w, https://christt105.github.io/blog/p/godosters-devlog-0/MonsterDatabase_hu_e8d9c19753dd9965.png 1024w"
+loading="lazy"
+alt="Base de Datos"
+class="gallery-image"
+data-flex-grow="40"
+data-flex-basis="96px"
+>&lt;/p>
+&lt;h2 id="demo">Demo
+&lt;/h2>&lt;p>Aunque esté roto por todos los sitios, voy a intentar publicar una build en cada devlog para ir viendo el avance del proyecto. Tened en cuenta que es una versión muy temprana del proyecto y que muchos sistemas no funcionan o necesitan tener el editor abierto para funcionar.&lt;/p>
+&lt;ul>
+&lt;li>🐧 &lt;a class="link" href="https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-linux.zip" target="_blank" rel="noopener"
+>Descargar Godosters v0.1.0 para Linux&lt;/a>&lt;/li>
+&lt;li>🪟 &lt;a class="link" href="https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-windows.zip" target="_blank" rel="noopener"
+>Descargar Godosters v0.1.0 para Windows&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="futuro">Futuro
+&lt;/h2>&lt;p>La verdad es que no tengo muy claro hasta dónde voy a llegar con este proyecto. Es un proyecto personal al que no le voy a sacar rédito económico, por lo que trabajo en él cuando el tiempo y las ganas me lo permiten. Estoy muy contento con Godot, por lo que es seguro que lo voy a mantener en este motor. Unity ya sé que no es el motor para mis proyectos personales por sus políticas y lo que puede llegar a pasar. Por otro lado, hacerlo de cero con C++ es tantísimo trabajo que no avanzaría nada. Godot es el punto perfecto entre versatilidad y donde realmente siento míos mis proyectos.&lt;/p>
+&lt;p>Aún me queda mucho por aprender de Godot, pero me está gustando. Mi intención con este proyecto es poder hacer todo lo posible sin librerías externas y todo en GDScript. El proyecto no está para ver, por lo que lo mantendré en privado una temporada más, pero si en algún momento empiezo a tener algo suficientemente estable y estoy orgulloso de lo que he hecho, lo haré público.&lt;/p>
+&lt;p>Este último año he estado bastante ocupado y no le he dedicado nada de tiempo. A ver si ahora empiezo a tener algo más de tiempo libre y me motivo con el blog para continuar con el desarrollo.&lt;/p>
+&lt;p>Y hasta aquí el primer post con contenido. Hay muchas cosas de las que quiero hablar y proyectos que comentar, por lo que intentaré estar más activo.&lt;/p>
+&lt;p>Nos vemos con más actualizaciones.&lt;/p>
+&lt;p>Adiós!&lt;/p></description></item><item><title>Hello World!</title><link>https://christt105.github.io/blog/es/p/hello-world/</link><pubDate>Mon, 04 Nov 2024 19:33:08 +0100</pubDate><guid>https://christt105.github.io/blog/es/p/hello-world/</guid><description>&lt;img src="https://christt105.github.io/blog/p/hello-world/cover.png" alt="Featured image of post Hello World!" />&lt;p>Hola a todo el mundo, os doy la bienvenida a mi blog.&lt;/p>
+&lt;p>Llevo bastante tiempo con la idea de hacer un blog rondando por la cabeza. Mi objetivo principal es compartir los avances de mis proyectos, algunos de los cuales aún no he hecho públicos. Aun así, no descarto escribir posts sobre temas que vaya descubriendo en el mundo de la tecnología o, quién sabe, quizá me anime a escribir sobre películas, series y videojuegos que vaya consumiendo.&lt;/p>
+&lt;p>Después de pensarlo bastante, me he decidido a hacer el blog con Hugo. Es mi primer contacto con esta plataforma, así que veremos qué tal funciona. He usado el tema &lt;em>Stack&lt;/em>, que podéis encontrar referenciado a pie de página, aunque lo he modificado un poco para que tenga una apariencia más cercana a mi web personal. También he dejado el modo claro para esa parte psicópata de la sociedad.&lt;/p>
+&lt;p>La idea es que todos los posts estén disponibles en los tres idiomas que hablo: castellano, catalán e inglés. A ver si no resulta muy costoso mantener los tres idiomas.&lt;/p>
+&lt;p>Los comentarios están completamente abiertos para cualquiera que quiera hablar de cualquier tema.&lt;/p>
+&lt;blockquote>
+&lt;p>Imagen por &lt;a class="link" href="https://x.com/kangkarrot" target="_blank" rel="noopener"
+>kang&lt;/a> en &lt;a class="link" href="https://x.com/kangkarrot/status/1813220809919635459" target="_blank" rel="noopener"
+>Twitter&lt;/a>&lt;/p>&lt;/blockquote></description></item><item><title>Archivos</title><link>https://christt105.github.io/blog/es/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0100</pubDate><guid>https://christt105.github.io/blog/es/archives/</guid><description/></item><item><title>Buscar</title><link>https://christt105.github.io/blog/es/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://christt105.github.io/blog/es/search/</guid><description/></item></channel></rss>
