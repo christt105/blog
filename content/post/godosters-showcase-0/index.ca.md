@@ -83,8 +83,7 @@ M’agrada molt la gestió de dades, però també ha estat un dels motius pels q
 
 Tot i que està trencat per molts llocs, intentaré treure una versió amb cada devlog per mostrar com avança el projecte. Tingues en compte que és una versió molt inicial, i que moltes funcionalitats no funcionen o només funcionen des de l’editor.
 
-- 🐧 [Descarrega Godosters v0.1.0 per a Linux](https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-linux.zip)
-- 🪟 [Descarrega Godosters v0.1.0 per a Windows](https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-windows.zip)
+{{< downloadcard tag=Godosters_v0.1.0 windows=true linux=true >}}
 
 ## Futur
 

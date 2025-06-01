@@ -83,8 +83,7 @@ Todo lo del manejo de datos es algo que me gusta y, a su vez, es lo que creo que
 
 Aunque esté roto por todos los sitios, voy a intentar publicar una build en cada devlog para ir viendo el avance del proyecto. Tened en cuenta que es una versión muy temprana del proyecto y que muchos sistemas no funcionan o necesitan tener el editor abierto para funcionar.
 
-- 🐧 [Descargar Godosters v0.1.0 para Linux](https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-linux.zip)
-- 🪟 [Descargar Godosters v0.1.0 para Windows](https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-windows.zip)
+{{< downloadcard tag=Godosters_v0.1.0 windows=true linux=true >}}
 
 ## Futuro
 

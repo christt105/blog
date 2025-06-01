@@ -83,8 +83,7 @@ I really like data management, but it’s also what made me take a long break fr
 
 Even though it’s broken in many ways, I’ll try to release a build with each devlog to show the project’s progress. Keep in mind this is a very early version, and many systems don’t work or require the editor to run.
 
-- 🐧 [Download Godosters v0.1.0 for Linux](https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-linux.zip)
-- 🪟 [Download Godosters v0.1.0 for Windows](https://github.com/christt105/blog/releases/download/Godosters_v0.1.0/Godosters_v0.1.0-windows.zip)
+{{< downloadcard tag=Godosters_v0.1.0 windows=true linux=true >}}
 
 ## Future
 
