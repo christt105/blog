@@ -79,14 +79,6 @@ Este fue el primer vídeo que tengo del proyecto de Godosters:
 
 Y eso es todo por ahora. Me hacía ilusión repasar la historia del proyecto, porque a veces parece que no hemos avanzado mucho... pero mirando atrás, en realidad ha habido muchos intentos y aprendizajes.
 
-Este fue el primer vídeo que tengo del proyecto de Godosters:
-
-![Godosters primer gif](godosters-first-gif.gif)
-
----
-
-Y eso es todo por ahora. Me hacía ilusión repasar la historia del proyecto, porque a veces parece que no hemos avanzado mucho... pero mirando atrás, en realidad ha habido muchos intentos y aprendizajes.
-
 Si te interesa ver las funcionalidades actuales del proyecto, te recomiendo echar un vistazo al [post anterior](https://christt105.github.io/blog/es/p/godosters-devlog-0/), donde hablo más en detalle de cómo está actualmente Godosters.
 
 ¡Nos vemos en la próxima entrada!
